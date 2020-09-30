@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="cpp-base64-cv2, To">
+    <meta name="keywords" content="git-lfs, To">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>cpp-base64-cv2 | To</title>
+    <title>git-lfs | To</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -286,12 +286,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">cpp-base64-cv2</h1>
+                    <h1 class="description center-align post-title">git-lfs</h1>
                 </div>
             </div>
         </div>
@@ -420,7 +420,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-01-04
+                    2019-03-27
                 </div>
                 
 
@@ -434,7 +434,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    119
+                    75
                 </div>
                 
 
@@ -446,57 +446,19 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="图片转base64。"><a href="#图片转base64。" class="headerlink" title="图片转base64。"></a>图片转base64。</h3><p>base64-decoding、base64-encoding:<a target="_blank" rel="noopener" href="https://renenyffenegger.ch/notes/development/Base64/Encoding-and-decoding-base-64-with-cpp">代码链接</a></p>
-<p>需要其中base64.h、base64.cpp。下面test.cpp代码可以验证正确性。</p>
-<p><strong>编译：</strong></p>
-<pre class=" language-bash"><code class="language-bash">g++ test.cpp base64.cpp -o <span class="token function">test</span></code></pre>
-<p>test.cpp</p>
-<pre class=" language-c++"><code class="language-c++">#include <string>
-#include <iostream>
-#include "base64.h"
-#include "stdlib.h"
-#include <fstream>
-#include <typeinfo>
-using namespace std;
-
-int main(int argc, char** argv)&#123;    
-    ifstream is("1.png", ifstream::in);
-
-    is.seekg(0, is.end);
-    int size = is.tellg();
-    is.seekg(0, is.beg);
-
-    char * buffer = new char[size];
-
-    is.read(buffer, size);  
-
-    string imgBase64 = base64_encode(reinterpret_cast<const unsigned char*>(buffer), size);
-    cout << "img base64 encode:" << imgBase64 << endl;    
-
-    string imgdecode64 = base64_decode(imgBase64);
-    cout << "img decode size:" << imgdecode64.size() << endl;      
-    return 0;
-&#125;</code></pre>
-<h3 id="base64转cv-Mat"><a href="#base64转cv-Mat" class="headerlink" title="base64转cv::Mat"></a>base64转cv::Mat</h3><p>cv2b64.cpp</p>
-<pre class=" language-c++"><code class="language-c++">#include <iostream>
-#include <string>
-#include <opencv2/opencv.hpp>
-#include "base64.h"
-#include <vector>
-const char* imgb64 = "";
-int main() &#123;
-    cv::Mat img;
-    std::string img_str;
-    img_str = base64_decode(imgb64);
-        std::vector<uchar> img_data(img_str.begin(), img_str.end());
-        img = imdecode(cv::Mat(img_data), CV_LOAD_IMAGE_COLOR);
-    cv::imshow("PCN", img);
-    cv::waitKey();
-    cv::destroyAllWindows();
-    return 0;
-&#125;</code></pre>
-<p><strong>编译：</strong></p>
-<pre class=" language-bash"><code class="language-bash">g++  base64.cpp cv2b64.cpp -o test-base64 <span class="token variable"><span class="token variable">`</span>pkg-config --cflags --libs opencv<span class="token variable">`</span></span></code></pre>
+                <h2 id="使用git-lfs传大文件"><a href="#使用git-lfs传大文件" class="headerlink" title="使用git-lfs传大文件"></a>使用git-lfs传大文件</h2><p>新建git仓库</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> init
+<span class="token function">git</span> lfs <span class="token function">install</span>
+<span class="token function">git</span> lfs track <span class="token string">"*.png"</span>    //.png为后缀的大文件
+<span class="token function">git</span> add README.md
+<span class="token function">git</span> add .gitattributes
+<span class="token function">git</span> commit -m <span class="token string">"xxx"</span>
+<span class="token function">git</span> remote add origin 
+<span class="token function">git</span> push -u origin master
+<span class="token function">git</span> add x.png
+<span class="token function">git</span> lfs ls-files    //成功追踪会显示文件
+<span class="token function">git</span> commit -m <span class="token string">"xxx"</span>
+<span class="token function">git</span> push -u origin master</code></pre>
 
             </div>
             <hr/>
@@ -522,7 +484,7 @@ int main() &#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://jingj1994.github.io/cpp-base64-cv2/index.html">http://jingj1994.github.io/cpp-base64-cv2/index.html</a>
+                    <a href="http://jingj1994.github.io/2019/03/27/git-lfs/index/">http://jingj1994.github.io/2019/03/27/git-lfs/index/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -725,33 +687,31 @@ int main() &#123;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/cpp-base64-cv2/index.html">
+                <a href="/2019/04/23/uwsgi-cache/index/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="cpp-base64-cv2">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="uwsgi-cache">
                         
-                        <span class="card-title">cpp-base64-cv2</span>
+                        <span class="card-title">uwsgi-cache</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            图片转base64。base64-decoding、base64-encoding:代码链接
-需要其中base64.h、base64.cpp。下面test.cpp代码可以验证正确性。
-编译：
-g++ test.cpp base64.cpp 
+                            原文：https://my.oschina.net/ghimi/blog/2705982
+sudo pip install uwsgi_cache
+配置文件中：cache2 = name=mycache,items=10,blocksize
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-01-04
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-04-23
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -760,7 +720,6 @@ g++ test.cpp base64.cpp
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -768,30 +727,36 @@ g++ test.cpp base64.cpp
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/cpp-base64-cv2/index.html">
+                <a href="/2019/01/09/tensorflow/index/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="cpp-base64-cv2">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="tensorflow">
                         
-                        <span class="card-title">cpp-base64-cv2</span>
+                        <span class="card-title">tensorflow</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            图片转base64。base64-decoding、base64-encoding:代码链接
-需要其中base64.h、base64.cpp。下面test.cpp代码可以验证正确性。
-编译：
-g++ test.cpp base64.cpp 
+                            pip离线安装tensorflow-1.7.0（CPU版）及所需依赖的安装顺序。
+系统：Ubuntu 16.04
+enum34
+futures
+protobuf
+grpcio
+Markdowm
+html5lib
+bleach
+Werkzeu
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-01-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-01-09
                             </span>
                         <span class="publish-author">
                             
@@ -801,7 +766,6 @@ g++ test.cpp base64.cpp
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -1026,13 +990,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/jingj1994" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:824902925@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -1042,7 +1006,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=824902925" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 824902925" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
@@ -1051,10 +1015,6 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 
 
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
 
 </div>
     </div>

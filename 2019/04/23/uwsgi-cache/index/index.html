@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Linux, To">
+    <meta name="keywords" content="uwsgi-cache, To">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Linux | To</title>
+    <title>uwsgi-cache | To</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -286,12 +286,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Linux</h1>
+                    <h1 class="description center-align post-title">uwsgi-cache</h1>
                 </div>
             </div>
         </div>
@@ -420,7 +420,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-01-04
+                    2019-04-23
                 </div>
                 
 
@@ -434,7 +434,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    153
+                    74
                 </div>
                 
 
@@ -446,20 +446,17 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <pre class=" language-bash"><code class="language-bash">解包：tar zxvf FileName.tar
+                <p>原文：<a target="_blank" rel="noopener" href="https://my.oschina.net/ghimi/blog/2705982">https://my.oschina.net/ghimi/blog/2705982</a></p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">sudo</span> pip <span class="token function">install</span> uwsgi_cache</code></pre>
+<p>配置文件中：<br>cache2 = name=mycache,items=10,blocksize=8000000</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> uwsgi_cache<span class="token punctuation">.</span>cache <span class="token keyword">import</span> CacheManager
 
-打包：tar czvf FileName.tar DirName
+cache <span class="token operator">=</span> CacheManager<span class="token punctuation">(</span><span class="token string">"cache01"</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#0缓存失效时间</span>
 
-比较两个文件夹下文件不同：diff -r dir1 dir2 
-
-查找最大十个文件：sudo <span class="token function">find</span> / -type f -print0 <span class="token operator">|</span> <span class="token function">xargs</span> -0 <span class="token function">du</span> -h <span class="token operator">|</span> <span class="token function">sort</span> -rh <span class="token operator">|</span> <span class="token function">head</span> -n 10</code></pre>
-<p>解决SecureCRT中文显示乱码：<a target="_blank" rel="noopener" href="https://blog.csdn.net/malundao/article/details/6584209">代码链接</a></p>
-<p>ls mv命令参数列表过长：<a target="_blank" rel="noopener" href="https://wenku.baidu.com/view/d1ca9404fad6195f312ba650.html">代码链接</a></p>
-<p>find命令：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/Baron-Lu/p/6991269.html">代码链接</a></p>
-<p>linux和windows之间的文件压缩和解压缩以及^R的问题：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/regit/p/8207097.html">代码链接</a></p>
-<p>in-source builds are not allowed：<a target="_blank" rel="noopener" href="https://blog.csdn.net/farmwang/article/details/78573387">代码链接</a></p>
-<p>ssh scp两台linux服务器之间传递文件或文件夹：<a target="_blank" rel="noopener" href="https://blog.csdn.net/niuxinzan/article/details/23458039">代码链接</a></p>
-<p>vim中多行批量插入空格：<a target="_blank" rel="noopener" href="https://blog.csdn.net/little_stupid_child/article/details/80791139">代码链接</a></p>
+cache<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>key<span class="token punctuation">)</span>
+cache<span class="token punctuation">.</span>set<span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+cache<span class="token punctuation">.</span>get<span class="token punctuation">(</span>key<span class="token punctuation">)</span></code></pre>
+<p>进程中在 ‘app.before_first_request` （Flask）中调用一次，所有进程中只存在一个cache。</p>
 
             </div>
             <hr/>
@@ -485,7 +482,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://jingj1994.github.io/Linux/index.html">http://jingj1994.github.io/Linux/index.html</a>
+                    <a href="http://jingj1994.github.io/2019/04/23/uwsgi-cache/index/">http://jingj1994.github.io/2019/04/23/uwsgi-cache/index/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -688,36 +685,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/Linux/index.html">
+                <a href="/2020/09/24/hello-world/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Linux">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
                         
-                        <span class="card-title">Linux</span>
+                        <span class="card-title">Hello World</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            解包：tar zxvf FileName.tar
-
-打包：tar czvf FileName.tar DirName
-
-比较两个文件夹下文件不同：diff -r dir1 dir2 
-
-查找最大十个文件：sudo find / -type 
+                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-01-04
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-24
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -726,7 +716,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -734,33 +723,32 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/Linux/index.html">
+                <a href="/2019/03/27/git-lfs/index/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Linux">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="git-lfs">
                         
-                        <span class="card-title">Linux</span>
+                        <span class="card-title">git-lfs</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            解包：tar zxvf FileName.tar
-
-打包：tar czvf FileName.tar DirName
-
-比较两个文件夹下文件不同：diff -r dir1 dir2 
-
-查找最大十个文件：sudo find / -type 
+                            使用git-lfs传大文件新建git仓库
+git init
+git lfs install
+git lfs track "*.png"    //.png为后缀的大文件
+git add README.md
+git add .gitattri
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-01-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-03-27
                             </span>
                         <span class="publish-author">
                             
@@ -770,7 +758,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -995,13 +982,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/jingj1994" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:824902925@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -1011,7 +998,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=824902925" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 824902925" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
@@ -1020,10 +1007,6 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 
 
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
 
 </div>
     </div>

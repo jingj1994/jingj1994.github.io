@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JAVA, To">
+    <meta name="keywords" content="Python, To">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JAVA | To</title>
+    <title>Python | To</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -286,12 +286,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JAVA</h1>
+                    <h1 class="description center-align post-title">Python</h1>
                 </div>
             </div>
         </div>
@@ -420,7 +420,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2018-11-14
+                    2019-01-04
                 </div>
                 
 
@@ -434,7 +434,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    424
+                    38
                 </div>
                 
 
@@ -446,37 +446,9 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>摘自《阿里巴巴Java开发手册（详尽版）.PDF》。</strong></p>
-<ul>
-<li><p>给JVM环境参数设置-XX:+HeapDumpOnOutOfMemoryError参数，让JVM碰到OOM场景时输出dump信息。 </p>
-<p>说明：OOM的发生是有概率的，甚至相隔数月才出现一例，出错时的堆内信息对解决问题非常有帮助。</p>
-</li>
-</ul>
-<ul>
-<li><p>在线上生产环境，JVM的Xms和Xmx设置一样大小的内存容量，避免在GC 后调整堆大小带来的压力。</p>
-<p>Xms：JVM初始分配的堆内存</p>
-<p>Xmx：JVM最大允许分配的堆内存</p>
-</li>
-</ul>
-<ul>
-<li><p>接口类中的方法和属性不要加任何修饰符号（public 也不要加），保持代码的简洁性，并加上有效的Javadoc注释。尽量不要在接口里定义变量，如果一定要定义变量，肯定是与接口方法相关，并且是整个应用的基础常量。 </p>
-<p>正例：接口方法签名void commit(); 接口基础常量String COMPANY = “alibaba”; </p>
-<p>反例：接口方法定义public abstract void f(); </p>
-<p>说明：JDK8中接口允许有默认实现，那么这个default方法，是对所有实现类都有价值的默认实现。</p>
-</li>
-</ul>
-<ul>
-<li><p>不允许任何魔法值（即未经预先定义的常量）直接出现在代码中。 </p>
-<p>反例：String key = “Id#taobao_” + tradeId; cache.put(key, value);</p>
-</li>
-</ul>
-<ul>
-<li><p>左小括号和字符之间不出现空格；同样，右小括号和字符之间也不出现空格；而左大括号前需要空格。</p>
-<p>if/for/while/switch/do等保留字与括号之间都必须加空格。</p>
-<p>采用4个空格缩进，禁止使用tab字符。</p>
-<p>方法参数在定义和传入时，多个参数逗号后边必须加空格。</p>
-</li>
-</ul>
+                <p>python安装时unicode的字节数设置：<br><code>./configure -enable-unicode=ucs4</code></p>
+<p>python找不到ssl模块：<a target="_blank" rel="noopener" href="https://blog.csdn.net/zj0078/article/details/78775027">代码链接</a></p>
+<p>python离线批量安装依赖包:<a target="_blank" rel="noopener" href="https://blog.csdn.net/zoujuanabc/article/details/79759324">代码链接</a></p>
 
             </div>
             <hr/>
@@ -502,7 +474,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://jingj1994.github.io/JAVA/index.html">http://jingj1994.github.io/JAVA/index.html</a>
+                    <a href="http://jingj1994.github.io/2019/01/04/python/index/">http://jingj1994.github.io/2019/01/04/python/index/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -705,33 +677,35 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/JAVA/index.html">
+                <a href="/2019/01/04/linux/index/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="JAVA">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Linux">
                         
-                        <span class="card-title">JAVA</span>
+                        <span class="card-title">Linux</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            摘自《阿里巴巴Java开发手册（详尽版）.PDF》。
+                            解包：tar zxvf FileName.tar
 
-给JVM环境参数设置-XX:+HeapDumpOnOutOfMemoryError参数，让JVM碰到OOM场景时输出dump信息。 
-说明：OOM的发生是有概率的，甚至相隔数月才出现一
+打包：tar czvf FileName.tar DirName
+
+比较两个文件夹下文件不同：diff -r dir1 dir2 
+
+查找最大十个文件：sudo find / -type 
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-11-14
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-01-04
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -740,7 +714,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -748,30 +721,30 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/JAVA/index.html">
+                <a href="/2019/01/04/cpp-base64-cv2/index/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="JAVA">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="cpp-base64-cv2">
                         
-                        <span class="card-title">JAVA</span>
+                        <span class="card-title">cpp-base64-cv2</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            摘自《阿里巴巴Java开发手册（详尽版）.PDF》。
-
-给JVM环境参数设置-XX:+HeapDumpOnOutOfMemoryError参数，让JVM碰到OOM场景时输出dump信息。 
-说明：OOM的发生是有概率的，甚至相隔数月才出现一
+                            图片转base64。base64-decoding、base64-encoding:代码链接
+需要其中base64.h、base64.cpp。下面test.cpp代码可以验证正确性。
+编译：
+g++ test.cpp base64.cpp 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-11-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-01-04
                             </span>
                         <span class="publish-author">
                             
@@ -781,7 +754,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -1006,13 +978,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/jingj1994" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:824902925@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -1022,7 +994,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=824902925" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 824902925" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
@@ -1031,10 +1003,6 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 
 
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
 
 </div>
     </div>

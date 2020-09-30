@@ -4,22 +4,9 @@
   
     
     <entry>
-      <title>Hello World</title>
-      <link href="2020/09/24/hello-world/"/>
-      <url>2020/09/24/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>uwsgi-cache</title>
-      <link href="2019/04/23/uwsgi-cache/index/"/>
-      <url>2019/04/23/uwsgi-cache/index/</url>
+      <link href="2019/04/23/uwsgi-cache/"/>
+      <url>2019/04/23/uwsgi-cache/</url>
       
         <content type="html"><![CDATA[<p>原文：<a href="https://my.oschina.net/ghimi/blog/2705982">https://my.oschina.net/ghimi/blog/2705982</a></p><pre class=" language-bash"><code class="language-bash"><span class="token function">sudo</span> pip <span class="token function">install</span> uwsgi_cache</code></pre><p>配置文件中：<br>cache2 = name=mycache,items=10,blocksize=8000000</p><pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> uwsgi_cache<span class="token punctuation">.</span>cache <span class="token keyword">import</span> CacheManagercache <span class="token operator">=</span> CacheManager<span class="token punctuation">(</span><span class="token string">"cache01"</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#0缓存失效时间</span>cache<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>key<span class="token punctuation">)</span>cache<span class="token punctuation">.</span>set<span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span>cache<span class="token punctuation">.</span>get<span class="token punctuation">(</span>key<span class="token punctuation">)</span></code></pre><p>进程中在 ‘app.before_first_request` （Flask）中调用一次，所有进程中只存在一个cache。</p>]]></content>
       
@@ -31,8 +18,8 @@
     
     <entry>
       <title>git-lfs</title>
-      <link href="2019/03/27/git-lfs/index/"/>
-      <url>2019/03/27/git-lfs/index/</url>
+      <link href="2019/03/27/git-lfs/"/>
+      <url>2019/03/27/git-lfs/</url>
       
         <content type="html"><![CDATA[<h2 id="使用git-lfs传大文件"><a href="#使用git-lfs传大文件" class="headerlink" title="使用git-lfs传大文件"></a>使用git-lfs传大文件</h2><p>新建git仓库</p><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> init<span class="token function">git</span> lfs <span class="token function">install</span><span class="token function">git</span> lfs track <span class="token string">"*.png"</span>    //.png为后缀的大文件<span class="token function">git</span> add README.md<span class="token function">git</span> add .gitattributes<span class="token function">git</span> commit -m <span class="token string">"xxx"</span><span class="token function">git</span> remote add origin <span class="token function">git</span> push -u origin master<span class="token function">git</span> add x.png<span class="token function">git</span> lfs ls-files    //成功追踪会显示文件<span class="token function">git</span> commit -m <span class="token string">"xxx"</span><span class="token function">git</span> push -u origin master</code></pre>]]></content>
       
@@ -44,8 +31,8 @@
     
     <entry>
       <title>tensorflow</title>
-      <link href="2019/01/09/tensorflow/index/"/>
-      <url>2019/01/09/tensorflow/index/</url>
+      <link href="2019/01/09/tensorflow/"/>
+      <url>2019/01/09/tensorflow/</url>
       
         <content type="html"><![CDATA[<p>pip离线安装tensorflow-1.7.0（CPU版）及所需依赖的安装顺序。</p><p>系统：Ubuntu 16.04</p><p>enum34</p><p>futures</p><p>protobuf</p><p>grpcio</p><p>Markdowm</p><p>html5lib</p><p>bleach</p><p>Werkzeug</p><p>tensorboard</p><p>absl-py</p><p>termcolor</p><p>gast</p><p>funcsigs</p><p>pbr</p><p>mock</p><p>backports.weakref</p><p>astor</p><p>tensorflow</p>]]></content>
       
@@ -57,8 +44,8 @@
     
     <entry>
       <title>Linux</title>
-      <link href="2019/01/04/linux/index/"/>
-      <url>2019/01/04/linux/index/</url>
+      <link href="2019/01/04/linux/"/>
+      <url>2019/01/04/linux/</url>
       
         <content type="html"><![CDATA[<pre class=" language-bash"><code class="language-bash">解包：tar zxvf FileName.tar打包：tar czvf FileName.tar DirName比较两个文件夹下文件不同：diff -r dir1 dir2 查找最大十个文件：sudo <span class="token function">find</span> / -type f -print0 <span class="token operator">|</span> <span class="token function">xargs</span> -0 <span class="token function">du</span> -h <span class="token operator">|</span> <span class="token function">sort</span> -rh <span class="token operator">|</span> <span class="token function">head</span> -n 10</code></pre><p>解决SecureCRT中文显示乱码：<a href="https://blog.csdn.net/malundao/article/details/6584209">代码链接</a></p><p>ls mv命令参数列表过长：<a href="https://wenku.baidu.com/view/d1ca9404fad6195f312ba650.html">代码链接</a></p><p>find命令：<a href="https://www.cnblogs.com/Baron-Lu/p/6991269.html">代码链接</a></p><p>linux和windows之间的文件压缩和解压缩以及^R的问题：<a href="https://www.cnblogs.com/regit/p/8207097.html">代码链接</a></p><p>in-source builds are not allowed：<a href="https://blog.csdn.net/farmwang/article/details/78573387">代码链接</a></p><p>ssh scp两台linux服务器之间传递文件或文件夹：<a href="https://blog.csdn.net/niuxinzan/article/details/23458039">代码链接</a></p><p>vim中多行批量插入空格：<a href="https://blog.csdn.net/little_stupid_child/article/details/80791139">代码链接</a></p>]]></content>
       
@@ -70,8 +57,8 @@
     
     <entry>
       <title>Python</title>
-      <link href="2019/01/04/python/index/"/>
-      <url>2019/01/04/python/index/</url>
+      <link href="2019/01/04/python/"/>
+      <url>2019/01/04/python/</url>
       
         <content type="html"><![CDATA[<p>python安装时unicode的字节数设置：<br><code>./configure -enable-unicode=ucs4</code></p><p>python找不到ssl模块：<a href="https://blog.csdn.net/zj0078/article/details/78775027">代码链接</a></p><p>python离线批量安装依赖包:<a href="https://blog.csdn.net/zoujuanabc/article/details/79759324">代码链接</a></p>]]></content>
       
@@ -83,8 +70,8 @@
     
     <entry>
       <title>cpp-base64-cv2</title>
-      <link href="2019/01/04/cpp-base64-cv2/index/"/>
-      <url>2019/01/04/cpp-base64-cv2/index/</url>
+      <link href="2019/01/04/cpp-base64-cv2/"/>
+      <url>2019/01/04/cpp-base64-cv2/</url>
       
         <content type="html"><![CDATA[<h3 id="图片转base64。"><a href="#图片转base64。" class="headerlink" title="图片转base64。"></a>图片转base64。</h3><p>base64-decoding、base64-encoding:<a href="https://renenyffenegger.ch/notes/development/Base64/Encoding-and-decoding-base-64-with-cpp">代码链接</a></p><p>需要其中base64.h、base64.cpp。下面test.cpp代码可以验证正确性。</p><p><strong>编译：</strong></p><pre class=" language-bash"><code class="language-bash">g++ test.cpp base64.cpp -o <span class="token function">test</span></code></pre><p>test.cpp</p><pre class=" language-c++"><code class="language-c++">#include <string>#include <iostream>#include "base64.h"#include "stdlib.h"#include <fstream>#include <typeinfo>using namespace std;int main(int argc, char** argv)&#123;        ifstream is("1.png", ifstream::in);    is.seekg(0, is.end);    int size = is.tellg();    is.seekg(0, is.beg);    char * buffer = new char[size];    is.read(buffer, size);      string imgBase64 = base64_encode(reinterpret_cast<const unsigned char*>(buffer), size);    cout << "img base64 encode:" << imgBase64 << endl;        string imgdecode64 = base64_decode(imgBase64);    cout << "img decode size:" << imgdecode64.size() << endl;          return 0;&#125;</code></pre><h3 id="base64转cv-Mat"><a href="#base64转cv-Mat" class="headerlink" title="base64转cv::Mat"></a>base64转cv::Mat</h3><p>cv2b64.cpp</p><pre class=" language-c++"><code class="language-c++">#include <iostream>#include <string>#include <opencv2/opencv.hpp>#include "base64.h"#include <vector>const char* imgb64 = "";int main() &#123;    cv::Mat img;    std::string img_str;    img_str = base64_decode(imgb64);        std::vector<uchar> img_data(img_str.begin(), img_str.end());        img = imdecode(cv::Mat(img_data), CV_LOAD_IMAGE_COLOR);    cv::imshow("PCN", img);    cv::waitKey();    cv::destroyAllWindows();    return 0;&#125;</code></pre><p><strong>编译：</strong></p><pre class=" language-bash"><code class="language-bash">g++  base64.cpp cv2b64.cpp -o test-base64 <span class="token variable"><span class="token variable">`</span>pkg-config --cflags --libs opencv<span class="token variable">`</span></span></code></pre>]]></content>
       
@@ -96,8 +83,8 @@
     
     <entry>
       <title>JAVA</title>
-      <link href="2018/11/14/java/index/"/>
-      <url>2018/11/14/java/index/</url>
+      <link href="2018/11/14/java/"/>
+      <url>2018/11/14/java/</url>
       
         <content type="html"><![CDATA[<p><strong>摘自《阿里巴巴Java开发手册（详尽版）.PDF》。</strong></p><ul><li><p>给JVM环境参数设置-XX:+HeapDumpOnOutOfMemoryError参数，让JVM碰到OOM场景时输出dump信息。 </p><p>说明：OOM的发生是有概率的，甚至相隔数月才出现一例，出错时的堆内信息对解决问题非常有帮助。</p></li></ul><ul><li><p>在线上生产环境，JVM的Xms和Xmx设置一样大小的内存容量，避免在GC 后调整堆大小带来的压力。</p><p>Xms：JVM初始分配的堆内存</p><p>Xmx：JVM最大允许分配的堆内存</p></li></ul><ul><li><p>接口类中的方法和属性不要加任何修饰符号（public 也不要加），保持代码的简洁性，并加上有效的Javadoc注释。尽量不要在接口里定义变量，如果一定要定义变量，肯定是与接口方法相关，并且是整个应用的基础常量。 </p><p>正例：接口方法签名void commit(); 接口基础常量String COMPANY = “alibaba”; </p><p>反例：接口方法定义public abstract void f(); </p><p>说明：JDK8中接口允许有默认实现，那么这个default方法，是对所有实现类都有价值的默认实现。</p></li></ul><ul><li><p>不允许任何魔法值（即未经预先定义的常量）直接出现在代码中。 </p><p>反例：String key = “Id#taobao_” + tradeId; cache.put(key, value);</p></li></ul><ul><li><p>左小括号和字符之间不出现空格；同样，右小括号和字符之间也不出现空格；而左大括号前需要空格。</p><p>if/for/while/switch/do等保留字与括号之间都必须加空格。</p><p>采用4个空格缩进，禁止使用tab字符。</p><p>方法参数在定义和传入时，多个参数逗号后边必须加空格。</p></li></ul>]]></content>
       

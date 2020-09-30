@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="git-lfs, To">
+    <meta name="keywords" content="JAVA, To">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>git-lfs | To</title>
+    <title>JAVA | To</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -286,12 +286,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">git-lfs</h1>
+                    <h1 class="description center-align post-title">JAVA</h1>
                 </div>
             </div>
         </div>
@@ -420,7 +420,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-03-27
+                    2018-11-14
                 </div>
                 
 
@@ -434,7 +434,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    75
+                    424
                 </div>
                 
 
@@ -446,19 +446,37 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="使用git-lfs传大文件"><a href="#使用git-lfs传大文件" class="headerlink" title="使用git-lfs传大文件"></a>使用git-lfs传大文件</h2><p>新建git仓库</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> init
-<span class="token function">git</span> lfs <span class="token function">install</span>
-<span class="token function">git</span> lfs track <span class="token string">"*.png"</span>    //.png为后缀的大文件
-<span class="token function">git</span> add README.md
-<span class="token function">git</span> add .gitattributes
-<span class="token function">git</span> commit -m <span class="token string">"xxx"</span>
-<span class="token function">git</span> remote add origin 
-<span class="token function">git</span> push -u origin master
-<span class="token function">git</span> add x.png
-<span class="token function">git</span> lfs ls-files    //成功追踪会显示文件
-<span class="token function">git</span> commit -m <span class="token string">"xxx"</span>
-<span class="token function">git</span> push -u origin master</code></pre>
+                <p><strong>摘自《阿里巴巴Java开发手册（详尽版）.PDF》。</strong></p>
+<ul>
+<li><p>给JVM环境参数设置-XX:+HeapDumpOnOutOfMemoryError参数，让JVM碰到OOM场景时输出dump信息。 </p>
+<p>说明：OOM的发生是有概率的，甚至相隔数月才出现一例，出错时的堆内信息对解决问题非常有帮助。</p>
+</li>
+</ul>
+<ul>
+<li><p>在线上生产环境，JVM的Xms和Xmx设置一样大小的内存容量，避免在GC 后调整堆大小带来的压力。</p>
+<p>Xms：JVM初始分配的堆内存</p>
+<p>Xmx：JVM最大允许分配的堆内存</p>
+</li>
+</ul>
+<ul>
+<li><p>接口类中的方法和属性不要加任何修饰符号（public 也不要加），保持代码的简洁性，并加上有效的Javadoc注释。尽量不要在接口里定义变量，如果一定要定义变量，肯定是与接口方法相关，并且是整个应用的基础常量。 </p>
+<p>正例：接口方法签名void commit(); 接口基础常量String COMPANY = “alibaba”; </p>
+<p>反例：接口方法定义public abstract void f(); </p>
+<p>说明：JDK8中接口允许有默认实现，那么这个default方法，是对所有实现类都有价值的默认实现。</p>
+</li>
+</ul>
+<ul>
+<li><p>不允许任何魔法值（即未经预先定义的常量）直接出现在代码中。 </p>
+<p>反例：String key = “Id#taobao_” + tradeId; cache.put(key, value);</p>
+</li>
+</ul>
+<ul>
+<li><p>左小括号和字符之间不出现空格；同样，右小括号和字符之间也不出现空格；而左大括号前需要空格。</p>
+<p>if/for/while/switch/do等保留字与括号之间都必须加空格。</p>
+<p>采用4个空格缩进，禁止使用tab字符。</p>
+<p>方法参数在定义和传入时，多个参数逗号后边必须加空格。</p>
+</li>
+</ul>
 
             </div>
             <hr/>
@@ -484,7 +502,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://jingj1994.github.io/2019/03/27/git-lfs/index/">http://jingj1994.github.io/2019/03/27/git-lfs/index/</a>
+                    <a href="http://jingj1994.github.io/2018/11/14/java/">http://jingj1994.github.io/2018/11/14/java/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -691,26 +709,27 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/04/23/uwsgi-cache/index/">
+                <a href="/2019/01/04/cpp-base64-cv2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="uwsgi-cache">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="cpp-base64-cv2">
                         
-                        <span class="card-title">uwsgi-cache</span>
+                        <span class="card-title">cpp-base64-cv2</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            原文：https://my.oschina.net/ghimi/blog/2705982
-sudo pip install uwsgi_cache
-配置文件中：cache2 = name=mycache,items=10,blocksize
+                            图片转base64。base64-decoding、base64-encoding:代码链接
+需要其中base64.h、base64.cpp。下面test.cpp代码可以验证正确性。
+编译：
+g++ test.cpp base64.cpp 
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-04-23
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-01-04
                         </span>
                         <span class="publish-author">
                             
@@ -727,36 +746,30 @@ sudo pip install uwsgi_cache
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2019/01/09/tensorflow/index/">
+                <a href="/2018/11/14/java/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="tensorflow">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="JAVA">
                         
-                        <span class="card-title">tensorflow</span>
+                        <span class="card-title">JAVA</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            pip离线安装tensorflow-1.7.0（CPU版）及所需依赖的安装顺序。
-系统：Ubuntu 16.04
-enum34
-futures
-protobuf
-grpcio
-Markdowm
-html5lib
-bleach
-Werkzeu
+                            摘自《阿里巴巴Java开发手册（详尽版）.PDF》。
+
+给JVM环境参数设置-XX:+HeapDumpOnOutOfMemoryError参数，让JVM碰到OOM场景时输出dump信息。 
+说明：OOM的发生是有概率的，甚至相隔数月才出现一
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-01-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2018-11-14
                             </span>
                         <span class="publish-author">
                             
@@ -766,6 +779,7 @@ Werkzeu
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
